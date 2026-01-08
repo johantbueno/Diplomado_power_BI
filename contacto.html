@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Diplomado Power BI</title>
+  <meta name="description" content="Contacta con Johan Tapia, PhD para más información sobre el Diplomado Power BI.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">📊 Power BI Diplomado</a>
+      <ul class="nav__menu">
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="programa.html" class="nav__link">Programa</a></li>
+        <li><a href="temas.html" class="nav__link">Temas</a></li>
+        <li><a href="practicas.html" class="nav__link">Prácticas</a></li>
+        <li><a href="dashboards.html" class="nav__link">Dashboards</a></li>
+        <li><a href="quiz.html" class="nav__link">Quiz</a></li>
+        <li><a href="recursos.html" class="nav__link">Recursos</a></li>
+        <li><a href="sobre.html" class="nav__link">Facilitador</a></li>
+        <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions">
+        <div class="nav__search"><input type="text" placeholder="Buscar..." aria-label="Buscar"><button>🔍</button></div>
+        <button class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+        <button class="nav__toggle" aria-label="Menú móvil">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" style="min-height: 50vh; padding: 6rem 2rem 3rem;">
+    <div class="hero__content">
+      <h1 class="hero__title">Contacto</h1>
+      <p class="hero__subtitle">¿Tienes preguntas sobre el diplomado? Estoy aquí para ayudarte</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid grid--2" style="align-items: start;">
+      <div class="scroll-reveal">
+        <h2 style="margin-bottom: 1.5rem;">Información de Contacto</h2>
+        
+        <div class="card" style="margin-bottom: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 60px; height: 60px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+              👨‍🏫
+            </div>
+            <div>
+              <h4>Johan Tapia, PhD</h4>
+              <p style="color: var(--color-gray);">Facilitador del Diplomado</p>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1rem;">
+            <strong>LinkedIn:</strong><br>
+            <a href="https://www.linkedin.com/in/johan-tapia-192183281/" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: none;">
+              linkedin.com/in/johan-tapia-192183281/
+            </a>
+          </div>
+          
+          <div style="margin-bottom: 1rem;">
+            <strong>Especialidades:</strong>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+              <li>Inteligencia de Negocios (BI)</li>
+              <li>Power BI y Análisis de Datos</li>
+              <li>Modelado DAX y Power Query</li>
+              <li>Data Warehousing y ETL</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 style="color: var(--color-primary); margin-bottom: 1rem;">¿Por qué contactarme?</h4>
+          <ul style="margin-left: 1.5rem;">
+            <li>Información sobre el programa del diplomado</li>
+            <li>Consultas sobre contenido y prácticas</li>
+            <li>Orientación sobre carrera en BI</li>
+            <li>Consultoría empresarial en Power BI</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scroll-reveal">
+        <h2 style="margin-bottom: 1.5rem;">Formulario de Contacto</h2>
+        
+        <form class="contact-form card" style="padding: 2rem;">
+          <div class="form-group">
+            <label for="nombre" class="form-label">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">Correo electrónico *</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="empresa" class="form-label">Empresa (opcional)</label>
+            <input type="text" id="empresa" name="empresa" class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="asunto" class="form-label">Asunto *</label>
+            <select id="asunto" name="asunto" class="form-select" required>
+              <option value="">Selecciona una opción</option>
+              <option value="informacion">Información sobre el diplomado</option>
+              <option value="inscripcion">Proceso de inscripción</option>
+              <option value="consultoria">Consultoría empresarial</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="mensaje" class="form-label">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Cuéntame en qué puedo ayudarte..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn--primary" style="width: 100%;">
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__brand">
+        <div class="footer__logo">📊 Power BI Diplomado</div>
+        <p class="footer__text">Programa completo de formación en Power BI e Inteligencia de Negocios.</p>
+      </div>
+      <div>
+        <h4 class="footer__title">Programa</h4>
+        <ul class="footer__links">
+          <li><a href="programa.html">Contenido</a></li>
+          <li><a href="practicas.html">Prácticas</a></li>
+          <li><a href="dashboards.html">Dashboards</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__title">Recursos</h4>
+        <ul class="footer__links">
+          <li><a href="recursos.html">Videos</a></li>
+          <li><a href="recursos.html">Documentación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__title">Contacto</h4>
+        <ul class="footer__links">
+          <li><a href="sobre.html">Sobre Johan Tapia</a></li>
+          <li><a href="contacto.html">Formulario</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 Diplomado Power BI - Johan Tapia, PhD. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

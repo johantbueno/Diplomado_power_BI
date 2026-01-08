@@ -1,0 +1,50 @@
+{
+  "ventas": [
+    {"id": 1, "fecha": "2024-01-15", "region": "Norte", "categoria": "Electrónica", "producto": "Laptop Gamer", "vendedor": "Ana García", "cantidad": 2, "precio": 1250, "total": 2500, "cliente": "Tech Store"},
+    {"id": 2, "fecha": "2024-01-16", "region": "Sur", "categoria": "Electrónica", "producto": "Smartphone", "vendedor": "Carlos López", "cantidad": 5, "precio": 800, "total": 4000, "cliente": "Mobile Plus"},
+    {"id": 3, "fecha": "2024-01-17", "region": "Este", "categoria": "Hogar", "producto": "Licuadora", "vendedor": "María Rodríguez", "cantidad": 3, "precio": 150, "total": 450, "cliente": "Home Center"},
+    {"id": 4, "fecha": "2024-01-18", "region": "Oeste", "categoria": "Deportes", "producto": "Bicicleta", "vendedor": "Juan Pérez", "cantidad": 1, "precio": 650, "total": 650, "cliente": "Sport Max"},
+    {"id": 5, "fecha": "2024-01-19", "region": "Norte", "categoria": "Electrónica", "producto": "Tablet", "vendedor": "Ana García", "cantidad": 4, "precio": 400, "total": 1600, "cliente": "Tech Store"},
+    {"id": 6, "fecha": "2024-01-20", "region": "Sur", "categoria": "Hogar", "producto": "Aspiradora", "vendedor": "Carlos López", "cantidad": 2, "precio": 300, "total": 600, "cliente": "Clean Home"},
+    {"id": 7, "fecha": "2024-01-21", "region": "Este", "categoria": "Deportes", "producto": "Pesas", "vendedor": "María Rodríguez", "cantidad": 6, "precio": 80, "total": 480, "cliente": "Gym Pro"},
+    {"id": 8, "fecha": "2024-01-22", "region": "Oeste", "categoria": "Electrónica", "producto": "Monitor", "vendedor": "Juan Pérez", "cantidad": 3, "precio": 350, "total": 1050, "cliente": "Office Solutions"},
+    {"id": 9, "fecha": "2024-01-23", "region": "Norte", "categoria": "Hogar", "producto": "Microondas", "vendedor": "Ana García", "cantidad": 2, "precio": 200, "total": 400, "cliente": "Kitchen Plus"},
+    {"id": 10, "fecha": "2024-01-24", "region": "Sur", "categoria": "Deportes", "producto": "Trotadora", "vendedor": "Carlos López", "cantidad": 1, "precio": 1200, "total": 1200, "cliente": "Fit Life"},
+    {"id": 11, "fecha": "2024-02-01", "region": "Este", "categoria": "Electrónica", "producto": "Laptop Gamer", "vendedor": "María Rodríguez", "cantidad": 1, "precio": 1250, "total": 1250, "cliente": "PC Masters"},
+    {"id": 12, "fecha": "2024-02-02", "region": "Oeste", "categoria": "Hogar", "producto": "Refrigeradora", "vendedor": "Juan Pérez", "cantidad": 1, "precio": 900, "total": 900, "cliente": "Cold Tech"},
+    {"id": 13, "fecha": "2024-02-03", "region": "Norte", "categoria": "Deportes", "producto": "Smartwatch", "vendedor": "Ana García", "cantidad": 5, "precio": 250, "total": 1250, "cliente": "Wearable Tech"},
+    {"id": 14, "fecha": "2024-02-04", "region": "Sur", "categoria": "Electrónica", "producto": "Auriculares", "vendedor": "Carlos López", "cantidad": 8, "precio": 120, "total": 960, "cliente": "Audio Express"},
+    {"id": 15, "fecha": "2024-02-05", "region": "Este", "categoria": "Hogar", "producto": "Cafetera", "vendedor": "María Rodríguez", "cantidad": 4, "precio": 180, "total": 720, "cliente": "Coffee Shop"},
+    {"id": 16, "fecha": "2024-02-06", "region": "Oeste", "categoria": "Deportes", "producto": "Yoga Mat", "vendedor": "Juan Pérez", "cantidad": 10, "precio": 40, "total": 400, "cliente": "Zen Store"},
+    {"id": 17, "fecha": "2024-02-07", "region": "Norte", "categoria": "Electrónica", "producto": "Smartphone", "vendedor": "Ana García", "cantidad": 3, "precio": 800, "total": 2400, "cliente": "Mobile Plus"},
+    {"id": 18, "fecha": "2024-02-08", "region": "Sur", "categoria": "Hogar", "producto": "Lavadora", "vendedor": "Carlos López", "cantidad": 2, "precio": 550, "total": 1100, "cliente": "Wash Center"},
+    {"id": 19, "fecha": "2024-02-09", "region": "Este", "categoria": "Deportes", "producto": "Bicicleta", "vendedor": "María Rodríguez", "cantidad": 2, "precio": 650, "total": 1300, "cliente": "Sport Max"},
+    {"id": 20, "fecha": "2024-02-10", "region": "Oeste", "categoria": "Electrónica", "producto": "Teclado Mecánico", "vendedor": "Juan Pérez", "cantidad": 6, "precio": 90, "total": 540, "cliente": "Gaming Pro"},
+    {"id": 21, "fecha": "2024-03-01", "region": "Norte", "categoria": "Hogar", "producto": "Horno Eléctrico", "vendedor": "Ana García", "cantidad": 2, "precio": 320, "total": 640, "cliente": "Bakery Supply"},
+    {"id": 22, "fecha": "2024-03-02", "region": "Sur", "categoria": "Deportes", "producto": "Esteras", "vendedor": "Carlos López", "cantidad": 8, "precio": 60, "total": 480, "cliente": "Gym Equipment"},
+    {"id": 23, "fecha": "2024-03-03", "region": "Este", "categoria": "Electrónica", "producto": "Webcam HD", "vendedor": "María Rodríguez", "cantidad": 7, "precio": 100, "total": 700, "cliente": "Remote Work"},
+    {"id": 24, "fecha": "2024-03-04", "region": "Oeste", "categoria": "Hogar", "producto": "Ventilador", "vendedor": "Juan Pérez", "cantidad": 5, "precio": 130, "total": 650, "cliente": "Climate Control"},
+    {"id": 25, "fecha": "2024-03-05", "region": "Norte", "categoria": "Deportes", "producto": "Guantes Boxeo", "vendedor": "Ana García", "cantidad": 4, "precio": 75, "total": 300, "cliente": "Fight Club"},
+    {"id": 26, "fecha": "2024-03-06", "region": "Sur", "categoria": "Electrónica", "producto": "Router WiFi", "vendedor": "Carlos López", "cantidad": 3, "precio": 180, "total": 540, "cliente": "Net Solutions"},
+    {"id": 27, "fecha": "2024-03-07", "region": "Este", "categoria": "Hogar", "producto": "Plancha", "vendedor": "María Rodríguez", "cantidad": 6, "precio": 85, "total": 510, "cliente": "Iron Pro"},
+    {"id": 28, "fecha": "2024-03-08", "region": "Oeste", "categoria": "Deportes", "producto": "Balones Futbol", "vendedor": "Juan Pérez", "cantidad": 12, "precio": 35, "total": 420, "cliente": "Soccer World"},
+    {"id": 29, "fecha": "2024-03-09", "region": "Norte", "categoria": "Electrónica", "producto": "Mouse Gamer", "vendedor": "Ana García", "cantidad": 9, "precio": 60, "total": 540, "cliente": "Gaming Pro"},
+    {"id": 30, "fecha": "2024-03-10", "region": "Sur", "categoria": "Hogar", "producto": "Secadora", "vendedor": "Carlos López", "cantidad": 1, "precio": 450, "total": 450, "cliente": "Wash Center"}
+  ],
+  "kpis": {
+    "total_ventas": 27150,
+    "total_unidades": 116,
+    "promedio_venta": 234.05,
+    "categorias_top": [
+      {"nombre": "Electrónica", "monto": 11980},
+      {"nombre": "Hogar", "monto": 5830},
+      {"nombre": "Deportes", "monto": 5330}
+    ],
+    "regiones_top": [
+      {"nombre": "Norte", "monto": 7890},
+      {"nombre": "Sur", "monto": 7650},
+      {"nombre": "Este", "monto": 5890},
+      {"nombre": "Oeste", "monto": 5720}
+    ]
+  }
+}

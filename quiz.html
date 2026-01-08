@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Diplomado Power BI</title>
+  <meta name="description" content="Evalúa tus conocimientos sobre Power BI e Inteligencia de Negocios">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">📊 Power BI Diplomado</a>
+      <ul class="nav__menu">
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="programa_completo.html" class="nav__link">Programa Completo</a></li>
+        <li><a href="temas.html" class="nav__link">Temas</a></li>
+        <li><a href="practicas.html" class="nav__link">Prácticas</a></li>
+        <li><a href="dashboards.html" class="nav__link">Dashboards</a></li>
+        <li><a href="quiz.html" class="nav__link">Quiz</a></li>
+        <li><a href="recursos.html" class="nav__link">Recursos</a></li>
+        <li><a href="sobre.html" class="nav__link">Facilitador</a></li>
+        <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions">
+        <div class="nav__search"><input type="text" placeholder="Buscar..." aria-label="Buscar"><button>🔍</button></div>
+        <button class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+        <button class="nav__toggle" aria-label="Menú móvil">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" style="min-height: 40vh; padding: 6rem 2rem 2rem;">
+    <div class="hero__content">
+      <h1 class="hero__title">Quiz de Conocimientos</h1>
+      <p class="hero__subtitle">Evalúa tu comprensión sobre Power BI e Inteligencia de Negocios</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="quiz-container">
+        <!-- Pantalla de inicio del quiz -->
+        <div id="quiz-start" class="quiz-start">
+          <div class="card" style="text-align: center; padding: 3rem;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🧠</div>
+            <h2 style="margin-bottom: 1rem;">¿Listo para evaluar tus conocimientos?</h2>
+            <p style="margin-bottom: 2rem; color: var(--color-gray);">
+              Este quiz contiene 20 preguntas sobre los conceptos fundamentales de Power BI e Inteligencia de Negocios. 
+              Tendrás 15 minutos para completarlo.
+            </p>
+            <button id="start-quiz-btn" class="btn btn--primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+              Comenzar Quiz
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz principal -->
+        <div id="quiz-main" class="quiz-main" style="display: none;">
+          <!-- Barra de progreso -->
+          <div class="quiz-progress">
+            <div class="quiz-progress__bar">
+              <div id="progress-fill" class="quiz-progress__fill"></div>
+            </div>
+            <div class="quiz-progress__text">
+              <span>Pregunta <span id="current-question">1</span> de <span id="total-questions">20</span></span>
+              <span id="quiz-timer">15:00</span>
+            </div>
+          </div>
+
+          <!-- Pregunta -->
+          <div class="quiz-question">
+            <h3 id="question-text" class="quiz-question__text"></h3>
+            <div id="question-options" class="quiz-options"></div>
+          </div>
+
+          <!-- Navegación -->
+          <div class="quiz-navigation">
+            <button id="prev-btn" class="btn btn--secondary" disabled>Anterior</button>
+            <button id="next-btn" class="btn btn--primary">Siguiente</button>
+          </div>
+        </div>
+
+        <!-- Resultados -->
+        <div id="quiz-results" class="quiz-results" style="display: none;">
+          <div class="card" style="text-align: center; padding: 3rem;">
+            <div id="result-icon" style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
+            <h2 id="result-title" style="margin-bottom: 1rem;">¡Quiz Completado!</h2>
+            <div id="result-score" style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem; color: var(--color-primary);"></div>
+            <p id="result-message" style="margin-bottom: 2rem; color: var(--color-gray);"></p>
+            
+            <div class="quiz-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+              <div class="stat-card" style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                <div class="stat-card__value" id="correct-answers" style="font-size: 1.5rem; font-weight: bold; color: var(--color-success);">0</div>
+                <div class="stat-card__label" style="font-size: 0.9rem; color: var(--color-gray);">Correctas</div>
+              </div>
+              <div class="stat-card" style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                <div class="stat-card__value" id="incorrect-answers" style="font-size: 1.5rem; font-weight: bold; color: var(--color-error);">0</div>
+                <div class="stat-card__label" style="font-size: 0.9rem; color: var(--color-gray);">Incorrectas</div>
+              </div>
+              <div class="stat-card" style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                <div class="stat-card__value" id="time-taken" style="font-size: 1.5rem; font-weight: bold; color: var(--color-primary);">0:00</div>
+                <div class="stat-card__label" style="font-size: 0.9rem; color: var(--color-gray);">Tiempo</div>
+              </div>
+            </div>
+            
+            <button id="restart-quiz-btn" class="btn btn--secondary">Reintentar Quiz</button>
+            <a href="programa_completo.html" class="btn btn--primary" style="margin-left: 1rem;">Revisar Contenido</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <p>&copy; 2024 Diplomado Power BI - Johan Tapia, PhD</p>
+      <p>Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Banco de preguntas del quiz
+    const quizQuestions = [
+      {
+        question: "¿Qué significa BI en el contexto de tecnologías de información?",
+        options: [
+          "Business Innovation",
+          "Business Intelligence", 
+          "Binary Information",
+          "Basic Integration"
+        ],
+        correct: 1,
+        explanation: "BI significa Business Intelligence (Inteligencia de Negocios), que es un conjunto de metodologías y tecnologías para transformar datos en información útil para la toma de decisiones."
+      },
+      {
+        question: "¿Cuál es el propósito principal de Power Query en Power BI?",
+        options: [
+          "Crear visualizaciones",
+          "Modelar datos con DAX",
+          "Conectar y transformar datos",
+          "Publicar reportes en la nube"
+        ],
+        correct: 2,
+        explanation: "Power Query es la herramienta ETL (Extract, Transform, Load) de Power BI que permite conectar y transformar datos de diversas fuentes antes de cargarlos al modelo."
+      },
+      {
+        question: "¿Qué lenguaje se utiliza para crear medidas y columnas calculadas en Power BI?",
+        options: [
+          "SQL",
+          "Python",
+          "DAX",
+          "M"
+        ],
+        correct: 2,
+        explanation: "DAX (Data Analysis Expressions) es el lenguaje de fórmulas de Power BI utilizado para crear medidas, columnas calculadas y tablas calculadas."
+      },
+      {
+        question: "En un modelo de datos Star Schema, ¿qué tipo de tabla se coloca en el centro?",
+        options: [
+          "Tabla de dimensión",
+          "Tabla de hechos",
+          "Tabla de referencia",
+          "Tabla de lookup"
+        ],
+        correct: 1,
+        explanation: "En el modelo Estrella (Star Schema), la tabla de hechos (Fact Table) se coloca en el centro y se relaciona con las tablas de dimensión que la rodean."
+      },
+      {
+        question: "¿Cuál función DAX se utiliza para calcular el total acumulado del año?",
+        options: [
+          "SUM",
+          "TOTALYTD",
+          "CALCULATE",
+          "DATEADD"
+        ],
+        correct: 1,
+        explanation: "TOTALYTD (Total Year To Date) es la función DAX específica para calcular totales acumulados desde el inicio del año hasta la fecha actual."
+      },
+      {
+        question: "¿Qué es Power BI Service?",
+        options: [
+          "La aplicación de escritorio",
+          "La plataforma en la nube de Power BI",
+          "Una función DAX",
+          "Un conector de datos"
+        ],
+        correct: 1,
+        explanation: "Power BI Service es la plataforma SaaS (Software as a Service) de Microsoft alojada en Azure Cloud que permite publicar, compartir y colaborar con reportes y dashboards."
+      },
+      {
+        question: "¿Cuál es la diferencia principal entre Import y DirectQuery?",
+        options: [
+          "Import es más rápido para grandes volúmenes",
+          "DirectQuery almacena datos en caché",
+          "Import copia datos a Power BI, DirectQuery consulta en tiempo real",
+          "No hay diferencia significativa"
+        ],
+        correct: 2,
+        explanation: "Import copia los datos al modelo de Power BI para mejor rendimiento, mientras que DirectQuery consulta directamente la fuente de datos en tiempo real sin almacenar localmente."
+      },
+      {
+        question: "¿Qué significa ETL en el contexto de procesamiento de datos?",
+        options: [
+          "Extract, Transform, Load",
+          "Evaluate, Test, Launch",
+          "Execute, Transfer, Log",
+          "Error, Try, Loop"
+        ],
+        correct: 0,
+        explanation: "ETL significa Extract (Extraer), Transform (Transformar), Load (Cargar), que es el proceso fundamental en la preparación de datos para análisis."
+      },
+      {
+        question: "¿Cuál de las siguientes NO es una función de agregación en DAX?",
+        options: [
+          "SUM",
+          "AVERAGE",
+          "FILTER",
+          "COUNT"
+        ],
+        correct: 2,
+        explanation: "FILTER es una función de filtrado, no de agregación. SUM, AVERAGE y COUNT son funciones de agregación que resumen múltiples valores en uno solo."
+      },
+      {
+        question: "¿Qué es un Data Warehouse?",
+        options: [
+          "Un almacén físico de servidores",
+          "Una base de datos optimizada para análisis y consultas",
+          "Un tipo de visualización en Power BI",
+          "Una función DAX"
+        ],
+        correct: 1,
+        explanation: "Un Data Warehouse (almacén de datos) es una base de datos optimizada para consultas y análisis, que almacena datos estructurados y procesados históricos."
+      },
+      {
+        question: "¿Qué función DAX utilizarías para comparar ventas del mismo período del año anterior?",
+        options: [
+          "DATEADD",
+          "SAMEPERIODLASTYEAR",
+          "TOTALYTD",
+          "CALENDAR"
+        ],
+        correct: 1,
+        explanation: "SAMEPERIODLASTYEAR es la función DAX que devuelve una tabla con las fechas del mismo período del año anterior, ideal para comparaciones temporales."
+      },
+      {
+        question: "En Power BI, ¿qué es una medida (Measure)?",
+        options: [
+          "Una columna en una tabla",
+          "Un cálculo dinámico que se evalúa en el contexto actual",
+          "Un tipo de visualización",
+          "Un conector de datos"
+        ],
+        correct: 1,
+        explanation: "Una medida (Measure) es un cálculo dinámico que se evalúa en el contexto actual de filtros y segmentaciones, calculada en tiempo de visualización."
+      },
+      {
+        question: "¿Cuál es el propósito de Row-Level Security (RLS) en Power BI?",
+        options: [
+          "Proteger el archivo .pbix con contraseña",
+          "Restringir acceso a filas específicas según el usuario",
+          "Encriptar los datos en tránsito",
+          "Limitar el número de usuarios concurrentes"
+        ],
+        correct: 1,
+        explanation: "RLS permite restringir el acceso a filas específicas de datos según el usuario que está viendo el reporte, mostrando solo la información autorizada."
+      },
+      {
+        question: "¿Qué es un modelo Estrella (Star Schema)?",
+        options: [
+          "Un tipo de gráfico en Power BI",
+          "Una arquitectura con tabla de hechos central y dimensiones alrededor",
+          "Una función DAX",
+          "Un tipo de conexión a datos"
+        ],
+        correct: 1,
+        explanation: "El modelo Estrella es una arquitectura de base de datos donde una tabla de hechos central se relaciona con múltiples tablas de dimensión, optimizando las consultas analíticas."
+      },
+      {
+        question: "¿Cuál es la frecuencia máxima de refresh para Power BI Pro?",
+        options: [
+          "1 vez al día",
+          "8 veces al día",
+          "24 veces al día",
+          "48 veces al día"
+        ],
+        correct: 1,
+        explanation: "Power BI Pro permite hasta 8 actualizaciones automáticas de datos por día, mientras que Premium permite hasta 48."
+      },
+      {
+        question: "¿Qué función DAX usarías para eliminar todos los filtros de una tabla?",
+        options: [
+          "REMOVEFILTERS",
+          "ALL",
+          "ALLEXCEPT",
+          "CALCULATE"
+        ],
+        correct: 1,
+        explanation: "ALL es la función DAX que elimina todos los filtros de una tabla o columna, útil para calcular totales independientes del contexto."
+      },
+      {
+        question: "¿Qué es Power BI Report Server?",
+        options: [
+          "La versión web de Power BI",
+          "Un servidor on-premise para publicar reportes Power BI",
+          "Una función DAX avanzada",
+          "Un tipo de visualización"
+        ],
+        correct: 1,
+        explanation: "Power BI Report Server es un servidor on-premise que permite publicar y gestionar reportes de Power BI dentro de la red corporativa, sin necesidad de internet."
+      },
+      {
+        question: "¿Cuál es el lenguaje de programación utilizado en Power Query?",
+        options: [
+          "Python",
+          "R",
+          "M",
+          "SQL"
+        ],
+        correct: 2,
+        explanation: "Power Query utiliza el lenguaje M (mashup language) para las transformaciones de datos, aunque la mayoría se puede hacer mediante la interfaz gráfica."
+      },
+      {
+        question: "¿Qué es un Data Lake?",
+        options: [
+          "Un lago de datos físico",
+          "Una base de datos relacional",
+          "Un repositorio que almacena datos en formato crudo",
+          "Un tipo de visualización"
+        ],
+        correct: 2,
+        explanation: "Un Data Lake es un repositorio que almacena grandes cantidades de datos en formato crudo/original, incluyendo estructurados, semi-estructurados y no estructurados."
+      },
+      {
+        question: "¿Cuál función DAX se utiliza para crear una tabla de calendario automáticamente?",
+        options: [
+          "CALENDAR",
+          "DATESYTD",
+          "TODAY",
+          "NOW"
+        ],
+        correct: 0,
+        explanation: "CALENDAR es la función DAX que genera una tabla de calendario con fechas entre dos fechas especificadas, base para análisis temporales."
+      }
+    ];
+
+    // Variables del quiz
+    let currentQuestionIndex = 0;
+    let userAnswers = [];
+    let quizStartTime;
+    let quizTimer;
+    let timeRemaining = 900; // 15 minutos en segundos
+
+    // Elementos del DOM
+    const quizStart = document.getElementById('quiz-start');
+    const quizMain = document.getElementById('quiz-main');
+    const quizResults = document.getElementById('quiz-results');
+    const startBtn = document.getElementById('start-quiz-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const restartBtn = document.getElementById('restart-quiz-btn');
+    const questionText = document.getElementById('question-text');
+    const questionOptions = document.getElementById('question-options');
+    const currentQuestionSpan = document.getElementById('current-question');
+    const totalQuestionsSpan = document.getElementById('total-questions');
+    const progressFill = document.getElementById('progress-fill');
+    const timerDisplay = document.getElementById('quiz-timer');
+
+    // Iniciar quiz
+    startBtn.addEventListener('click', startQuiz);
+    nextBtn.addEventListener('click', nextQuestion);
+    prevBtn.addEventListener('click', prevQuestion);
+    restartBtn.addEventListener('click', restartQuiz);
+
+    function startQuiz() {
+      quizStart.style.display = 'none';
+      quizMain.style.display = 'block';
+      quizStartTime = new Date();
+      userAnswers = new Array(quizQuestions.length).fill(null);
+      totalQuestionsSpan.textContent = quizQuestions.length;
+      
+      startTimer();
+      showQuestion(0);
+    }
+
+    function startTimer() {
+      quizTimer = setInterval(() => {
+        timeRemaining--;
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+        timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        
+        if (timeRemaining <= 0) {
+          clearInterval(quizTimer);
+          finishQuiz();
+        }
+      }, 1000);
+    }
+
+    function showQuestion(index) {
+      currentQuestionIndex = index;
+      const question = quizQuestions[index];
+      
+      // Actualizar progreso
+      currentQuestionSpan.textContent = index + 1;
+      const progress = ((index + 1) / quizQuestions.length) * 100;
+      progressFill.style.width = `${progress}%`;
+      
+      // Mostrar pregunta
+      questionText.textContent = question.question;
+      
+      // Mostrar opciones
+      questionOptions.innerHTML = '';
+      question.options.forEach((option, optionIndex) => {
+        const optionDiv = document.createElement('div');
+        optionDiv.className = 'quiz-option';
+        optionDiv.innerHTML = `
+          <label class="quiz-option__label">
+            <input type="radio" name="answer" value="${optionIndex}" ${userAnswers[index] === optionIndex ? 'checked' : ''}>
+            <span class="quiz-option__text">${option}</span>
+          </label>
+        `;
+        
+        // Agregar event listener
+        const radio = optionDiv.querySelector('input[type="radio"]');
+        radio.addEventListener('change', () => {
+          userAnswers[index] = optionIndex;
+          updateNavigationButtons();
+        });
+        
+        questionOptions.appendChild(optionDiv);
+      });
+      
+      updateNavigationButtons();
+    }
+
+    function updateNavigationButtons() {
+      prevBtn.disabled = currentQuestionIndex === 0;
+      
+      if (currentQuestionIndex === quizQuestions.length - 1) {
+        nextBtn.textContent = 'Finalizar Quiz';
+      } else {
+        nextBtn.textContent = 'Siguiente';
+      }
+      
+      // Habilitar/deshabilitar siguiente según si hay respuesta
+      nextBtn.disabled = userAnswers[currentQuestionIndex] === null;
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < quizQuestions.length - 1) {
+        showQuestion(currentQuestionIndex + 1);
+      } else {
+        finishQuiz();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        showQuestion(currentQuestionIndex - 1);
+      }
+    }
+
+    function finishQuiz() {
+      clearInterval(quizTimer);
+      
+      // Calcular resultados
+      let correctCount = 0;
+      userAnswers.forEach((answer, index) => {
+        if (answer === quizQuestions[index].correct) {
+          correctCount++;
+        }
+      });
+      
+      const incorrectCount = quizQuestions.length - correctCount;
+      const percentage = Math.round((correctCount / quizQuestions.length) * 100);
+      const timeTaken = Math.floor((new Date() - quizStartTime) / 1000);
+      const minutes = Math.floor(timeTaken / 60);
+      const seconds = timeTaken % 60;
+      
+      // Mostrar resultados
+      quizMain.style.display = 'none';
+      quizResults.style.display = 'block';
+      
+      // Actualizar estadísticas
+      document.getElementById('correct-answers').textContent = correctCount;
+      document.getElementById('incorrect-answers').textContent = incorrectCount;
+      document.getElementById('time-taken').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+      document.getElementById('result-score').textContent = `${correctCount}/${quizQuestions.length} (${percentage}%)`;
+      
+      // Mensaje según puntaje
+      let message, icon, title;
+      if (percentage >= 90) {
+        message = "¡Excelente! Tienes un dominio avanzado de Power BI.";
+        icon = "🏆";
+        title = "¡Excelente trabajo!";
+      } else if (percentage >= 70) {
+        message = "¡Muy bien! Tienes buenos conocimientos, puedes mejorar con práctica.";
+        icon = "👍";
+        title = "¡Buen trabajo!";
+      } else if (percentage >= 50) {
+        message = "Bien, pero necesitas estudiar más los conceptos fundamentales.";
+        icon = "📚";
+        title = "Sigue estudiando";
+      } else {
+        message = "Te recomendamos revisar el contenido del programa completo.";
+        icon = "💪";
+        title = "No te rindas";
+      }
+      
+      document.getElementById('result-message').textContent = message;
+      document.getElementById('result-icon').textContent = icon;
+      document.getElementById('result-title').textContent = title;
+      
+      // Guardar resultado en localStorage
+      const result = {
+        score: percentage,
+        correct: correctCount,
+        incorrect: incorrectCount,
+        total: quizQuestions.length,
+        time: timeTaken,
+        date: new Date().toISOString()
+      };
+      
+      let results = JSON.parse(localStorage.getItem('powerbi_quiz_results') || '[]');
+      results.push(result);
+      localStorage.setItem('powerbi_quiz_results', JSON.stringify(results));
+    }
+
+    function restartQuiz() {
+      currentQuestionIndex = 0;
+      userAnswers = [];
+      timeRemaining = 900;
+      
+      quizResults.style.display = 'none';
+      quizStart.style.display = 'block';
+      
+      // Resetear timer display
+      timerDisplay.textContent = '15:00';
+      progressFill.style.width = '0%';
+    }
+
+    // Permitir navegación con teclado
+    document.addEventListener('keydown', (e) => {
+      if (quizMain.style.display === 'block') {
+        if (e.key === 'ArrowLeft' && !prevBtn.disabled) {
+          prevQuestion();
+        } else if (e.key === 'ArrowRight' && !nextBtn.disabled) {
+          nextQuestion();
+        } else if (e.key >= '1' && e.key <= '4') {
+          const optionIndex = parseInt(e.key) - 1;
+          const option = questionOptions.children[optionIndex];
+          if (option) {
+            const radio = option.querySelector('input[type="radio"]');
+            radio.checked = true;
+            userAnswers[currentQuestionIndex] = optionIndex;
+            updateNavigationButtons();
+          }
+        }
+      }
+    });
+  </script>
+
+  <style>
+    .quiz-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .quiz-progress {
+      margin-bottom: 2rem;
+    }
+
+    .quiz-progress__bar {
+      width: 100%;
+      height: 8px;
+      background: var(--color-gray-light);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .quiz-progress__fill {
+      height: 100%;
+      background: var(--color-primary);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .quiz-progress__text {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: var(--color-gray);
+    }
+
+    .quiz-question__text {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .quiz-options {
+      margin-bottom: 2rem;
+    }
+
+    .quiz-option {
+      margin-bottom: 1rem;
+    }
+
+    .quiz-option__label {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      background: var(--color-gray-light);
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .quiz-option__label:hover {
+      background: var(--color-gray-hover);
+    }
+
+    .quiz-option__label input[type="radio"] {
+      margin-right: 1rem;
+      transform: scale(1.2);
+    }
+
+    .quiz-option__text {
+      flex: 1;
+    }
+
+    .quiz-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .quiz-navigation button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .stat-card {
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .quiz-navigation {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .quiz-navigation button {
+        width: 100%;
+      }
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Crawlers de motores de búsqueda
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Archivos y directorios a excluir
+Disallow: /data/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://johantapia.com/powerbi/sitemap.xml

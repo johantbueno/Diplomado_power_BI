@@ -1,0 +1,49 @@
+{
+  "empleados": [
+    {"id": 1, "nombre": "Ana García", "departamento": "Ventas", "puesto": "Ejecutiva", "salario": 35000, "antiguedad": 3, "satisfaccion": 8.5, "edad": 28, "genero": "Femenino", "fecha_ingreso": "2021-03-15", "estado": "Activo"},
+    {"id": 2, "nombre": "Carlos López", "departamento": "Ventas", "puesto": "Gerente", "salario": 55000, "antiguedad": 7, "satisfaccion": 9.0, "edad": 35, "genero": "Masculino", "fecha_ingreso": "2017-06-20", "estado": "Activo"},
+    {"id": 3, "nombre": "María Rodríguez", "departamento": "Marketing", "puesto": "Analista", "salario": 32000, "antiguedad": 2, "satisfaccion": 7.8, "edad": 26, "genero": "Femenino", "fecha_ingreso": "2022-01-10", "estado": "Activo"},
+    {"id": 4, "nombre": "Juan Pérez", "departamento": "IT", "puesto": "Desarrollador", "salario": 42000, "antiguedad": 4, "satisfaccion": 8.2, "edad": 30, "genero": "Masculino", "fecha_ingreso": "2020-08-12", "estado": "Activo"},
+    {"id": 5, "nombre": "Laura Fernández", "departamento": "RRHH", "puesto": "Especialista", "salario": 30000, "antiguedad": 1, "satisfaccion": 7.5, "edad": 24, "genero": "Femenino", "fecha_ingreso": "2023-02-28", "estado": "Activo"},
+    {"id": 6, "nombre": "Diego Martínez", "departamento": "Finanzas", "puesto": "Contador", "salario": 38000, "antiguedad": 5, "satisfaccion": 8.0, "edad": 32, "genero": "Masculino", "fecha_ingreso": "2019-04-18", "estado": "Activo"},
+    {"id": 7, "nombre": "Sofia Herrera", "departamento": "Ventas", "puesto": "Ejecutiva", "salario": 34000, "antiguedad": 2, "satisfaccion": 8.7, "edad": 27, "genero": "Femenino", "fecha_ingreso": "2022-05-22", "estado": "Activo"},
+    {"id": 8, "nombre": "Roberto Sánchez", "departamento": "IT", "puesto": "Soporte", "salario": 28000, "antiguedad": 1, "satisfaccion": 7.9, "edad": 25, "genero": "Masculino", "fecha_ingreso": "2023-01-15", "estado": "Activo"},
+    {"id": 9, "nombre": "Patricia Díaz", "departamento": "Marketing", "puesto": "Gerente", "salario": 50000, "antiguedad": 6, "satisfaccion": 8.8, "edad": 34, "genero": "Femenino", "fecha_ingreso": "2018-09-05", "estado": "Activo"},
+    {"id": 10, "nombre": "Miguel Ruiz", "departamento": "Finanzas", "puesto": "Analista", "salario": 33000, "antiguedad": 3, "satisfaccion": 7.6, "edad": 29, "genero": "Masculino", "fecha_ingreso": "2021-07-30", "estado": "Activo"},
+    {"id": 11, "nombre": "Lucía Gómez", "departamento": "RRHH", "puesto": "Gerente", "salario": 48000, "antiguedad": 8, "satisfaccion": 9.1, "edad": 36, "genero": "Femenino", "fecha_ingreso": "2016-11-12", "estado": "Activo"},
+    {"id": 12, "nombre": "Fernando Castro", "departamento": "Ventas", "puesto": "Ejecutivo", "salario": 36000, "antiguedad": 4, "satisfaccion": 8.3, "edad": 31, "genero": "Masculino", "fecha_ingreso": "2020-02-14", "estado": "Activo"},
+    {"id": 13, "nombre": "Valentina Morales", "departamento": "IT", "puesto": "Analista", "salario": 37000, "antiguedad": 2, "satisfaccion": 8.1, "edad": 26, "genero": "Femenino", "fecha_ingreso": "2022-08-19", "estado": "Activo"},
+    {"id": 14, "nombre": "Andrés Jiménez", "departamento": "Marketing", "puesto": "Diseñador", "salario": 31000, "antiguedad": 1, "satisfaccion": 7.7, "edad": 25, "genero": "Masculino", "fecha_ingreso": "2023-03-10", "estado": "Activo"},
+    {"id": 15, "nombre": "Natalia Vargas", "departamento": "Finanzas", "puesto": "Gerente", "salario": 58000, "antiguedad": 9, "satisfaccion": 9.2, "edad": 38, "genero": "Femenino", "fecha_ingreso": "2015-10-08", "estado": "Activo"},
+    {"id": 16, "nombre": "Ricardo Mendoza", "departamento": "Ventas", "puesto": "Ejecutivo", "salario": 34500, "antiguedad": 3, "satisfaccion": 8.0, "edad": 28, "genero": "Masculino", "fecha_ingreso": "2021-01-20", "estado": "Inactivo"},
+    {"id": 17, "nombre": "Carmen Ríos", "departamento": "RRHH", "puesto": "Especialista", "salario": 29500, "antiguedad": 2, "satisfaccion": 7.9, "edad": 27, "genero": "Femenino", "fecha_ingreso": "2022-04-12", "estado": "Activo"},
+    {"id": 18, "nombre": "Alejandro Cruz", "departamento": "IT", "puesto": "Desarrollador", "salario": 43000, "antiguedad": 5, "satisfaccion": 8.4, "edad": 33, "genero": "Masculino", "fecha_ingreso": "2019-06-25", "estado": "Activo"},
+    {"id": 19, "nombre": "Daniela Flores", "departamento": "Marketing", "puesto": "Ejecutiva", "salario": 32500, "antiguedad": 1, "satisfaccion": 7.8, "edad": 24, "genero": "Femenino", "fecha_ingreso": "2023-01-05", "estado": "Activo"},
+    {"id": 20, "nombre": "José Aguilar", "departamento": "Finanzas", "puesto": "Analista", "salario": 34000, "antiguedad": 2, "satisfaccion": 7.4, "edad": 30, "genero": "Masculino", "fecha_ingreso": "2022-09-18", "estado": "Activo"}
+  ],
+  "kpis": {
+    "total_empleados": 19,
+    "empleados_activos": 18,
+    "empleados_inactivos": 1,
+    "promedio_salario": 38421,
+    "promedio_satisfaccion": 8.1,
+    "tasa_retencion": 95,
+    "distribucion_genero": [
+      {"genero": "Femenino", "cantidad": 10},
+      {"genero": "Masculino", "cantidad": 9}
+    ],
+    "distribucion_departamento": [
+      {"departamento": "Ventas", "cantidad": 5},
+      {"departamento": "IT", "cantidad": 3},
+      {"departamento": "Marketing", "cantidad": 3},
+      {"departamento": "Finanzas", "cantidad": 3},
+      {"departamento": "RRHH", "cantidad": 2}
+    ],
+    "rango_edad": [
+      {"rango": "20-25", "cantidad": 3},
+      {"rango": "26-30", "cantidad": 7},
+      {"rango": "31-35", "cantidad": 5},
+      {"rango": "36-40", "cantidad": 4}
+    ]
+  }
+}

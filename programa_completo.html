@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa Completo - Diplomado Power BI</title>
+  <meta name="description" content="Programa completo con todo el contenido teórico del Diplomado Power BI de Johan Tapia, PhD">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">📊 Power BI Diplomado</a>
+      <ul class="nav__menu">
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="programa_completo.html" class="nav__link">Programa Completo</a></li>
+        <li><a href="temas.html" class="nav__link">Temas</a></li>
+        <li><a href="practicas.html" class="nav__link">Prácticas</a></li>
+        <li><a href="dashboards.html" class="nav__link">Dashboards</a></li>
+        <li><a href="quiz.html" class="nav__link">Quiz</a></li>
+        <li><a href="recursos.html" class="nav__link">Recursos</a></li>
+        <li><a href="sobre.html" class="nav__link">Facilitador</a></li>
+        <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions">
+        <div class="nav__search"><input type="text" placeholder="Buscar..." aria-label="Buscar"><button>🔍</button></div>
+        <button class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+        <button class="nav__toggle" aria-label="Menú móvil">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" style="min-height: 50vh; padding: 6rem 2rem 3rem;">
+    <div class="hero__content">
+      <h1 class="hero__title">Programa Completo del Diplomado</h1>
+      <p class="hero__subtitle">Todo el contenido teórico detallado de Power BI e Inteligencia de Negocios</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__header scroll-reveal">
+      <h2 class="section__title">Contenido Teórico Completo</h2>
+      <p class="section__subtitle">Material educativo basado en los PDFs del diplomado</p>
+    </div>
+
+    <!-- MÓDULO 1: FUNDAMENTOS -->
+    <div class="card scroll-reveal" style="margin-bottom: 3rem;">
+      <h2 id="modulo1" style="color: var(--color-primary); margin-bottom: 2rem; font-size: 2rem;">
+        📚 MÓDULO 1: FUNDAMENTOS DE INTELIGENCIA DE NEGOCIOS
+      </h2>
+      
+      <ul class="accordion">
+        <!-- 1.1 Concepto de Inteligencia de Negocio -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>1.1 Concepto de Inteligencia de Negocio</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Definición Extendida</h4>
+              <p style="margin-bottom: 1.5rem; line-height: 1.7;">
+                La Inteligencia de Negocios (Business Intelligence - BI) es un conjunto de metodologías, procesos, arquitecturas y tecnologías que transforman datos crudos en información significativa y útil para la toma de decisiones estratégicas empresariales. No se trata simplemente de generar reportes, sino de crear una cultura organizacional orientada a los datos.
+              </p>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Componentes Fundamentales de BI:</h4>
+              <div style="background: var(--color-gray-light); padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                <ol style="margin-left: 1.5rem; line-height: 1.8;">
+                  <li><strong>Datos como activo estratégico:</strong> Los datos representan el nuevo petróleo de las organizaciones modernas</li>
+                  <li><strong>Transformación inteligente:</strong> Conversión de datos brutos en insights accionables</li>
+                  <li><strong>Democratización de la información:</strong> Acceso a información relevante para todos los niveles organizacionales</li>
+                  <li><strong>Decisiones basadas en evidencia:</strong> Reducción de la intuición a favor del análisis objetivo</li>
+                </ol>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Evolución Histórica de BI</h4>
+              <div style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); color: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                <div class="grid grid--2" style="gap: 1rem;">
+                  <div>
+                    <strong>1960s:</strong> Sistemas de Soporte a Decisiones (DSS)<br>
+                    <strong>1980s:</strong> Almacenes de datos (Data Warehouses)<br>
+                    <strong>1990s:</strong> OLAP (Online Analytical Processing)
+                  </div>
+                  <div>
+                    <strong>2000s:</strong> Self-Service BI<br>
+                    <strong>2010s:</strong> BI en la nube<br>
+                    <strong>2020s:</strong> Big Data e IA integrada
+                  </div>
+                </div>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Caso Práctico Real: SuperMax</h4>
+              <div style="border-left: 4px solid var(--color-secondary); padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                <p style="margin-bottom: 1rem;"><strong>Situación inicial:</strong> Datos dispersos en sistema POS, Excel, Access y RRHH</p>
+                <p style="margin-bottom: 1rem;"><strong>Implementación:</strong> Consolidación de fuentes, dashboard ejecutivo, análisis por región</p>
+                <p><strong>Resultados:</strong> 30% reducción en productos sin rotación, 25% aumento en productos de alta demanda, 15% ahorro en costos operacionales</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <!-- 1.2 Propósito de las Plataformas BI -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>1.2 Propósito de las Plataformas de Inteligencia de Negocios</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Las plataformas BI cumplen 5 propósitos fundamentales:</h4>
+              
+              <div style="margin-bottom: 2rem;">
+                <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-primary);"><strong>1. RECOLECCIÓN DE DATOS</strong></p>
+                <p style="margin-bottom: 0.5rem;">Captura sistemática y organizada de información desde múltiples fuentes heterogéneas.</p>
+                <ul style="margin-left: 2rem;">
+                  <li><strong>Internas:</strong> ERP (SAP, Oracle), CRM (Salesforce), Bases de datos, Archivos Excel/CSV</li>
+                  <li><strong>Externas:</strong> APIs públicas, Google Analytics, Proveedores de datos, Open Data</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 2rem;">
+                <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-primary);"><strong>2. LIMPIEZA Y TRANSFORMACIÓN (ETL)</strong></p>
+                <p style="margin-bottom: 0.5rem;">Proceso de Extract, Transform, Load con las siguientes transformaciones:</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Estandarización: Convertir formatos (ej: teléfonos a (XXX) XXX-XXXX)</li>
+                  <li>Normalización: Nombres con Primera Letra Mayúscula</li>
+                  <li>Agregación: Sumar ventas diarias para obtener mensuales</li>
+                  <li>Derivación: Calcular Edad desde Fecha de Nacimiento</li>
+                  <li>Limpieza: Eliminar caracteres especiales, espacios extra</li>
+                  <li>Validación: Verificar formato válido de emails</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 2rem;">
+                <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-primary);"><strong>3. ALMACENAMIENTO</strong></p>
+                <div class="grid grid--2" style="gap: 1rem;">
+                  <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                    <strong>Data Warehouse:</strong><br>
+                    • Datos estructurados y procesados<br>
+                    • Esquema definido (Schema-on-Write)<br>
+                    • Optimizado para consultas y análisis
+                  </div>
+                  <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                    <strong>Data Lake:</strong><br>
+                    • Datos en formato crudo/original<br>
+                    • Schema-on-Read (esquema al leer)<br>
+                    • Mayor volumen, menor costo de almacenamiento
+                  </div>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 2rem;">
+                <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-primary);"><strong>4. ANÁLISIS DE DATOS</strong></p>
+                <ul style="margin-left: 2rem;">
+                  <li><strong>Minería de Datos:</strong> Descubrimiento de patrones ocultos</li>
+                  <li><strong>Análisis Estadístico:</strong> Descriptivo e inferencial</li>
+                  <li><strong>Visualización de Datos:</strong> Claridad, precisión, eficiencia</li>
+                </ul>
+              </div>
+              
+              <div>
+                <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-primary);"><strong>5. TOMA DE DECISIONES</strong></p>
+                <p style="margin-bottom: 0.5rem;">Framework completo:</p>
+                <div style="background: var(--color-primary); color: white; padding: 1rem; border-radius: 0.5rem; text-align: center; font-family: monospace;">
+                  Definir problema → Recopilar datos → Análisis → Insights → Acciones → Monitoreo
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <!-- 1.3 Esquemas de Implementación -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>1.3 Esquemas de Implementación de BI</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">ARQUITECTURAS DE IMPLEMENTACIÓN</h4>
+              
+              <div style="margin-bottom: 2rem;">
+                <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-primary);"><strong>A. SOLUCIONES EN LA NUBE (CLOUD)</strong></p>
+                <div class="grid grid--2" style="gap: 1rem; margin-bottom: 1rem;">
+                  <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                    <strong>Power BI Free:</strong><br>
+                    Uso personal, 1GB, gratuito
+                  </div>
+                  <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                    <strong>Power BI Pro:</strong><br>
+                    $9.99/usuario/mes, 10GB, colaboración
+                  </div>
+                  <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                    <strong>Premium Per User:</strong><br>
+                    $20/usuario/mes, mayor capacidad
+                  </div>
+                  <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                    <strong>Premium Per Capacity:</strong><br>
+                    Desde $4,995/mes, capacidad dedicada
+                  </div>
+                </div>
+                <p style="margin-left: 1rem;"><strong>Azure Analysis Services:</strong> Motor de análisis multidimensional en la nube</p>
+              </div>
+              
+              <div style="margin-bottom: 2rem;">
+                <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-primary);"><strong>B. SOLUCIONES ON-PREMISE (LOCAL)</strong></p>
+                <ul style="margin-left: 2rem;">
+                  <li><strong>SQL Server Analysis Services (SSAS):</strong> Servidor de análisis de datos instalado en infraestructura propia</li>
+                  <li><strong>Power BI Report Server:</strong> Servidor de reportes on-premise para publicar y gestionar reportes</li>
+                </ul>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">COMPARACIÓN CLOUD VS ON-PREMISE</h4>
+              <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead>
+                  <tr style="background: var(--color-gray-light);">
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Característica</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Cloud</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">On-Premise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Ubicación</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Nube (Azure)</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Servidor local</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Costo</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Suscripción mensual</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Inversión inicial alta</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Escalabilidad</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Infinita</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Limitada por hardware</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Mantenimiento</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Automático</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Requiere equipo IT</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </li>
+        
+        <!-- 1.4 Ruta de Procesamiento -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>1.4 Ruta para el Procesamiento y Acceso a Datos en BI</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">FLUJO COMPLETO</h4>
+              <div style="background: var(--color-primary); color: white; padding: 1rem; border-radius: 0.5rem; text-align: center; font-family: monospace; margin-bottom: 2rem;">
+                [FUENTES] → [ETL] → [DWH] → [MODELO BI] → [VISUALIZACIÓN] → [USUARIOS]
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">FASE 1: PROCESAMIENTO DE DATOS (ETL)</h4>
+              <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li><strong>Programación de carga:</strong> Full Load, Incremental, CDC (Change Data Capture)</li>
+                <li><strong>Extracción:</strong> SQL, Archivos, APIs, Web Scraping</li>
+                <li><strong>Transformación:</strong> Limpieza, validación, enriquecimiento de datos</li>
+                <li><strong>Monitoreo:</strong> Rendimiento del proceso, logs, alertas</li>
+              </ul>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">FASE 2: ALMACENAMIENTO (DWH)</h4>
+              <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                <li>Estructuración de tablas de dimensiones y hechos</li>
+                <li>Modelo Estrella vs Copo de Nieve</li>
+                <li>Actualización recurrente del almacén</li>
+                <li>Configuración de roles para acceso de usuarios</li>
+              </ul>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">FASE 3: DESPLIEGUE</h4>
+              <ul style="margin-left: 2rem;">
+                <li>Despliegue en dashboards y reportes</li>
+                <li>Despliegue para consumo en aplicaciones</li>
+                <li>Despliegue para otras plataformas (REST, Email, DBLinks)</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MÓDULO 2: POWER BI DESKTOP -->
+    <div class="card scroll-reveal" style="margin-bottom: 3rem;">
+      <h2 id="modulo2" style="color: var(--color-primary); margin-bottom: 2rem; font-size: 2rem;">
+        ⚡ MÓDULO 2: POWER BI DESKTOP - MODELO DE DATOS
+      </h2>
+      
+      <ul class="accordion">
+        <!-- 2.1 Interfaz de PBI Desktop -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>2.1 Conociendo la Interfaz de Power BI Desktop</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <p style="margin-bottom: 1.5rem;">Power BI Desktop es una herramienta de Microsoft que permite crear, analizar y compartir informes y dashboards interactivos.</p>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Las Tres Capas de Power BI:</h4>
+              <div class="grid grid--3" style="gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem; text-align: center;">
+                  <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔌</div>
+                  <strong>Power Query</strong><br>
+                  Conexión y transformación de datos
+                </div>
+                <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem; text-align: center;">
+                  <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎯</div>
+                  <strong>Power Pivot</strong><br>
+                  Modelado de datos y relaciones
+                </div>
+                <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem; text-align: center;">
+                  <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+                  <strong>Power View</strong><br>
+                  Visualización y reportes
+                </div>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Componentes de la Interfaz:</h4>
+              <ol style="margin-left: 2rem; line-height: 1.8;">
+                <li><strong>Vista Report:</strong> Diseño de reportes y visualizaciones</li>
+                <li><strong>Vista Data:</strong> Exploración y modelado de datos</li>
+                <li><strong>Vista Model:</strong> Gestión de relaciones entre tablas</li>
+                <li><strong>Cinta de opciones:</strong> Menús y herramientas organizadas por categorías</li>
+                <li><strong>Panel Campos:</strong> Lista de todas las tablas y columnas disponibles</li>
+                <li><strong>Panel Visualizaciones:</strong> Tipos de gráficos y formato</li>
+                <li><strong>Área de trabajo:</strong> Espacio para crear y organizar visuales</li>
+                <li><strong>Filtros:</strong> Control de filtros a nivel de página, reporte y visual</li>
+              </ol>
+            </div>
+          </div>
+        </li>
+        
+        <!-- 2.2 Power Query - DETALLADO -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>2.2 Power Query - Transformación de Datos (ETL)</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">¿Qué es Power Query?</h4>
+              <p style="margin-bottom: 1.5rem; line-height: 1.7;">
+                Power Query es una herramienta de ETL (Extract, Transform, Load) que permite conectar y transformar datos de diversas fuentes. Es el motor de transformación de datos de Power BI que utiliza el lenguaje M.
+              </p>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Pasos del Proceso ETL:</h4>
+              <ol style="margin-left: 2rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                <li><strong>Conexión a fuentes:</strong> Bases de datos, archivos, servicios en la nube</li>
+                <li><strong>Importación:</strong> Selección y preview de datos</li>
+                <li><strong>Transformación:</strong> Limpieza, filtros, combinación de datos</li>
+                <li><strong>Pasos aplicados:</strong> Registro de todas las transformaciones</li>
+                <li><strong>Carga:</strong> Importar al modelo de datos</li>
+                <li><strong>Actualización:</strong> Refresh automático de datos</li>
+              </ol>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Transformaciones Comunes en Power Query:</h4>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">1. LIMPIEZA BÁSICA</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Eliminar duplicados</li>
+                  <li>Manejar valores nulos</li>
+                  <li>Estandarizar formatos</li>
+                  <li>Eliminar espacios en blanco</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">2. DIVIDIR Y COMBINAR COLUMNAS</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Dividir por delimitador (espacio, coma, guión)</li>
+                  <li>Dividir por posición (número de caracteres)</li>
+                  <li>Combinar columnas con separador</li>
+                  <li>Extraer texto (primero, último, rango)</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">3. PIVOTAR Y DESPIVOTAR</p>
+                <ul style="margin-left: 2rem;">
+                  <li><strong>Despivotar:</strong> Convertir de formato ancho a largo</li>
+                  <li><strong>Pivotar:</strong> Convertir de formato largo a ancho</li>
+                  <li>Útil para normalizar datos de encuestas y matrices</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">4. AGREGAR Y AGRUPAR</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Sumar, promediar, contar por grupos</li>
+                  <li>Crear columnas condicionales (if-then-else)</li>
+                  <li>Agregar columnas personalizadas con fórmulas</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">5. COMBINAR CONSULTAS</p>
+                <ul style="margin-left: 2rem;">
+                  <li><strong>Merge (Join):</strong> Inner, Left, Right, Full Outer</li>
+                  <li><strong>Append (Union):</strong> Combinar tablas verticalmente</li>
+                </ul>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Funciones del Lenguaje M Útiles:</h4>
+              <div class="grid grid--2" style="gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                  <strong>Texto:</strong><br>
+                  • Text.Proper("juan pérez") → "Juan Pérez"<br>
+                  • Text.Trim("  texto  ") → "texto"<br>
+                  • Text.Start("Producto-ABC", 8) → "Producto"
+                </div>
+                <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                  <strong>Fechas:</strong><br>
+                  • Date.Year(#date(2024,3,15)) → 2024<br>
+                  • Date.MonthName(#date(2024,3,15)) → "marzo"<br>
+                  • Date.AddDays(fecha, 10)
+                </div>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Ejemplo Práctico en M:</h4>
+              <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 0.5rem; font-family: 'Courier New', monospace; font-size: 0.9rem; overflow-x: auto;">
+                <pre>let
+  Origen = Excel.Workbook(File.Contents("C:\Datos\Ventas.xlsx")),
+  Hoja = Origen{[Name="Ventas"]}[Data],
+  Encabezados = Table.PromoteHeaders(Hoja),
+  TiposCambiados = Table.TransformColumnTypes(Encabezados, {
+    {"Fecha", type date},
+    {"Monto", type number},
+    {"Cantidad", Int64.Type}
+  }),
+  SinNulos = Table.SelectRows(TiposCambiados, each [Monto] <> null and [Monto] > 0),
+  AgregarAño = Table.AddColumn(SinNulos, "Año", each Date.Year([Fecha]), Int64.Type),
+  FiltroFecha = Table.SelectRows(AgregarAño, each [Año] >= 2023)
+in
+  FiltroFecha</pre>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <!-- 2.3 Power Pivot - DETALLADO -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>2.3 Power Pivot - Modelado de Datos y DAX</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">¿Qué es Power Pivot?</h4>
+              <p style="margin-bottom: 1.5rem; line-height: 1.7;">
+                Power Pivot es el motor de modelado de datos de Power BI. Permite construir y trabajar con modelos de datos, el corazón del análisis. Utiliza el lenguaje DAX (Data Analysis Expressions) para crear cálculos.
+              </p>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Componentes del Modelo de Datos:</h4>
+              <div style="background: var(--color-gray-light); padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                <div class="grid grid--2" style="gap: 1rem;">
+                  <div>
+                    <strong>📊 Tablas de Dimensiones (Lookup):</strong><br>
+                    • Contienen atributos descriptivos<br>
+                    • Generalmente pequeñas (&lt; 1M filas)<br>
+                    • Ejemplos: Clientes, Productos, Ubicaciones, Tiempo
+                  </div>
+                  <div>
+                    <strong>📈 Tablas de Hechos (Fact):</strong><br>
+                    • Contienen transacciones/eventos<br>
+                    • Generalmente grandes (&gt; 1M filas)<br>
+                    • Contienen métricas numéricas<br>
+                    • Ejemplos: Ventas, Pedidos, Inventario
+                  </div>
+                </div>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Tipos de Relaciones:</h4>
+              <div style="margin-bottom: 1.5rem;">
+                <ol style="margin-left: 2rem; line-height: 1.8;">
+                  <li><strong>Uno a Muchos (1:N):</strong> La más común. Un cliente puede tener muchas ventas.</li>
+                  <li><strong>Uno a Uno (1:1):</strong> Poco común. Un cliente tiene un perfil extendido.</li>
+                  <li><strong>Muchos a Muchos (N:N):</strong> Requiere tabla puente. Muchos productos en muchas categorías.</li>
+                </ol>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Modelo Estrella (Star Schema) - RECOMENDADO ⭐</h4>
+              <div style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); color: white; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem; text-align: center;">
+                <div style="font-family: monospace; font-size: 0.9rem; line-height: 1.6;">
+                  Dim_Tiempo<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;│<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;│<br>
+                  Dim_Cliente ──── Fact_Ventas ──── Dim_Producto<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;│<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;│<br>
+                  Dim_Ubicacion
+                </div>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">DAX - Data Analysis Expressions</h4>
+              <p style="margin-bottom: 1rem;">DAX es el lenguaje de fórmulas de Power BI. Sintaxis básica:</p>
+              <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; font-family: monospace;">
+                Nombre_Medida = FUNCIÓN(Tabla[Columna])
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Diferencia: Medida vs Columna Calculada</h4>
+              <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead>
+                  <tr style="background: var(--color-gray-light);">
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Aspecto</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Medida</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Columna Calculada</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Cuándo se calcula</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Al visualizar</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Al cargar datos</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Contexto</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Dinámico (filtros)</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Fijo (fila por fila)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Uso de memoria</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Bajo</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Alto</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Funciones DAX Esenciales:</h4>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">A. FUNCIONES DE AGREGACIÓN</p>
+                <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 0.5rem; font-family: monospace; font-size: 0.9rem; overflow-x: auto;">
+                  <pre>// Suma total
+Total Ventas = SUM(Ventas[Monto])
+
+// Promedio
+Ticket Promedio = AVERAGE(Ventas[Monto])
+
+// Contar filas
+Total Transacciones = COUNTROWS(Ventas)
+
+// Contar valores únicos
+Productos Únicos = DISTINCTCOUNT(Ventas[Producto_ID])</pre>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">B. FUNCIONES DE FILTRADO - CALCULATE (La más poderosa)</p>
+                <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 0.5rem; font-family: monospace; font-size: 0.9rem; overflow-x: auto;">
+                  <pre>// Ventas solo de 2024
+Ventas 2024 =
+CALCULATE(
+  SUM(Ventas[Monto]),
+  Ventas[Año] = 2024
+)
+
+// Ventas de categoría específica
+Ventas Electrónica =
+CALCULATE(
+  SUM(Ventas[Monto]),
+  Productos[Categoría] = "Electrónica"
+)
+
+// Múltiples filtros
+Ventas Online 2024 =
+CALCULATE(
+  SUM(Ventas[Monto]),
+  Ventas[Canal] = "Online",
+  Ventas[Año] = 2024
+)</pre>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">C. FUNCIONES DE FECHA (Time Intelligence)</p>
+                <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 0.5rem; font-family: monospace; font-size: 0.9rem; overflow-x: auto;">
+                  <pre>// Acumulado año
+Ventas YTD =
+TOTALYTD(
+  SUM(Ventas[Monto]),
+  Calendario[Fecha]
+)
+
+// Año anterior
+Ventas Año Anterior =
+CALCULATE(
+  SUM(Ventas[Monto]),
+  SAMEPERIODLASTYEAR(Calendario[Fecha])
+)
+
+// Diferencia de fechas
+Días desde Compra =
+DATEDIFF(
+  Ventas[Fecha],
+  TODAY(),
+  DAY
+)</pre>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">D. TABLA CALENDARIO (Esencial)</p>
+                <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 0.5rem; font-family: monospace; font-size: 0.9rem; overflow-x: auto;">
+                  <pre>Calendario =
+ADDCOLUMNS(
+  CALENDAR(DATE(2020,1,1), DATE(2025,12,31)),
+  "Año", YEAR([Date]),
+  "Mes", MONTH([Date]),
+  "Mes Nombre", FORMAT([Date], "MMMM"),
+  "Trimestre", "Q" & QUARTER([Date]),
+  "Día Semana", WEEKDAY([Date]),
+  "Nombre Día", FORMAT([Date], "DDDD")
+)</pre>
+                </div>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Ejemplo Práctico Completo - Dashboard de Ventas:</h4>
+              <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 0.5rem; font-family: monospace; font-size: 0.85rem; overflow-x: auto;">
+                <pre>// === MEDIDAS BÁSICAS ===
+Total Ventas = SUM(Ventas[Monto])
+Total Cantidad = SUM(Ventas[Cantidad])
+Transacciones = COUNTROWS(Ventas)
+Ticket Promedio = DIVIDE([Total Ventas], [Transacciones])
+
+// === COMPARACIÓN TEMPORAL ===
+Ventas Año Anterior =
+CALCULATE(
+  [Total Ventas],
+  SAMEPERIODLASTYEAR(Calendario[Fecha])
+)
+
+Variación % vs AA =
+DIVIDE(
+  [Total Ventas] - [Ventas Año Anterior],
+  [Ventas Año Anterior],
+  0
+)
+
+// === TOP PRODUCTOS ===
+Top 10 Productos =
+CALCULATE(
+  [Total Ventas],
+  TOPN(
+    10,
+    ALL(Productos[Nombre]),
+    [Total Ventas],
+    DESC
+  )
+)</pre>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <!-- 2.4 Power View -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>2.4 Power View - Visualización y Reportes</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <p style="margin-bottom: 1.5rem; line-height: 1.7;">
+                Power View es la capa de visualización donde creamos dashboards e informes interactivos. Es la vista principal que ven los usuarios finales.
+              </p>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Componentes Principales:</h4>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">1. VISUALES BÁSICOS</p>
+                <div class="grid grid--3" style="gap: 0.5rem;">
+                  <div style="background: var(--color-gray-light); padding: 0.5rem; border-radius: 0.25rem;">📊 Gráfico de Barras/Columnas</div>
+                  <div style="background: var(--color-gray-light); padding: 0.5rem; border-radius: 0.25rem;">📈 Gráfico de Líneas</div>
+                  <div style="background: var(--color-gray-light); padding: 0.5rem; border-radius: 0.25rem;">🥧 Gráfico Circular</div>
+                  <div style="background: var(--color-gray-light); padding: 0.5rem; border-radius: 0.25rem;">🗺️ Mapas</div>
+                  <div style="background: var(--color-gray-light); padding: 0.5rem; border-radius: 0.25rem;">📋 Tablas y Matrices</div>
+                  <div style="background: var(--color-gray-light); padding: 0.5rem; border-radius: 0.25rem;">💳 Tarjetas (KPIs)</div>
+                </div>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">2. SEGMENTADORES (SLICERS)</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Filtros visuales para usuarios</li>
+                  <li>Múltiples tipos: lista, dropdown, rango de fechas</li>
+                  <li>Pueden sincronizarse entre páginas</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">3. FILTROS</p>
+                <ul style="margin-left: 2rem;">
+                  <li><strong>Nivel de visual:</strong> Afecta solo un gráfico</li>
+                  <li><strong>Nivel de página:</strong> Afecta toda la página</li>
+                  <li><strong>Nivel de reporte:</strong> Afecta todo el reporte</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">4. BOTONES Y NAVEGACIÓN</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Navegación entre páginas del reporte</li>
+                  <li>Acciones personalizadas (marcadores, filtros)</li>
+                  <li>Botones con estados (hover, pressed)</li>
+                </ul>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Mejores Prácticas de Visualización:</h4>
+              <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                <ul style="margin-left: 2rem; line-height: 1.8;">
+                  <li><strong>Claridad:</strong> El mensaje debe ser inmediato</li>
+                  <li><strong>Precisión:</strong> Representar datos fielmente</li>
+                  <li><strong>Eficiencia:</strong> Máxima información, mínima tinta</li>
+                  <li><strong>Estética:</strong> Visualmente atractivo sin sacrificar función</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MÓDULO 3: POWER BI SERVICE -->
+    <div class="card scroll-reveal" style="margin-bottom: 3rem;">
+      <h2 id="modulo3" style="color: var(--color-primary); margin-bottom: 2rem; font-size: 2rem;">
+        ☁️ MÓDULO 3: POWER BI SERVICE - COLABORACIÓN Y PUBLICACIÓN
+      </h2>
+      
+      <ul class="accordion">
+        <!-- 3.1 Power BI Service -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>3.1 Power BI Service (Nube)</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">¿Qué es Power BI Service?</h4>
+              <p style="margin-bottom: 1.5rem; line-height: 1.7;">
+                Power BI Service es la plataforma SaaS (Software as a Service) de Microsoft para Business Intelligence, alojada completamente en Azure Cloud. Permite colaboración, compartición y consumo de reportes desde cualquier lugar con conexión a internet.
+              </p>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Características Principales:</h4>
+              <ul style="margin-left: 2rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                <li><strong>Publicación de reportes:</strong> Subir .pbix desde Power BI Desktop</li>
+                <li><strong>Dashboards interactivos:</strong> Crear paneles con múltiples visuales</li>
+                <li><strong>Refresh automático de datos:</strong> Programar actualizaciones periódicas</li>
+                <li><strong>Compartir y colaborar:</strong> Permisos y workspaces compartidos</li>
+                <li><strong>Row-Level Security (RLS):</strong> Seguridad a nivel de filas</li>
+                <li><strong>Alertas y suscripciones:</strong> Notificaciones por email</li>
+                <li><strong>Integración con Teams:</strong> Incrustar reportes en Microsoft Teams</li>
+                <li><strong>Mobile apps:</strong> Apps nativas para iOS y Android</li>
+              </ul>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Tipos de Workspaces:</h4>
+              <div class="grid grid--3" style="gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                  <strong>Mi área de trabajo</strong><br>
+                  Espacio personal, privado
+                </div>
+                <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                  <strong>Workspaces compartidos</strong><br>
+                  Colaboración en equipo
+                </div>
+                <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem;">
+                  <strong>Workspaces Premium</strong><br>
+                  Capacidad dedicada
+                </div>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Proceso de Publicación:</h4>
+              <ol style="margin-left: 2rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                <li>Desarrollar reporte en Power BI Desktop</li>
+                <li>Clic en "Publicar"</li>
+                <li>Seleccionar workspace de destino</li>
+                <li>Configurar credenciales de origen de datos</li>
+                <li>Programar refresh automático</li>
+                <li>Establecer permisos de acceso</li>
+              </ol>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Planes y Licenciamiento:</h4>
+              <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead>
+                  <tr style="background: var(--color-gray-light);">
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Plan</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Precio</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Capacidad</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Ideal para</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Free</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Gratis</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">1 GB</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Aprendizaje, uso individual</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Pro</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">$9.99/mes</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">10 GB</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Equipos pequeños-medianos</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Premium Per User</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">$20/mes</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">100 GB</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Power users, equipos analíticos</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Premium Per Capacity</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">$4,995/mes</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">400 GB</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Empresas grandes</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </li>
+        
+        <!-- 3.2 Seguridad y RLS -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>3.2 Seguridad - Row Level Security (RLS)</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">¿Qué es RLS?</h4>
+              <p style="margin-bottom: 1.5rem; line-height: 1.7;">
+                Row-Level Security (RLS) permite restringir el acceso a filas específicas de datos según el usuario que está viendo el reporte. Cada usuario ve solo la información que le corresponde.
+              </p>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Escenario de Ejemplo:</h4>
+              <div style="background: var(--color-gray-light); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                <p><strong>Empresa con vendedores:</strong></p>
+                <ul style="margin-left: 2rem;">
+                  <li>Juan (vendedor de zona Norte) solo ve ventas de la zona Norte</li>
+                  <li>María (vendedor de zona Sur) solo ve ventas de la zona Sur</li>
+                  <li>El gerente puede ver todas las zonas</li>
+                </ul>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Pasos para Configurar RLS:</h4>
+              <ol style="margin-left: 2rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                <li>En Power BI Desktop, ir a "Modeling" → "Manage Roles"</li>
+                <li>Crear un nuevo rol (ej: "Vendedores")</li>
+                <li>Definir la regla DAX para cada tabla</li>
+                <li>Publicar el reporte en Power BI Service</li>
+                <li>En Service, asignar usuarios o grupos al rol</li>
+              </ol>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Ejemplo de Regla DAX:</h4>
+              <div style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 0.5rem; font-family: monospace; font-size: 0.9rem; overflow-x: auto;">
+                <pre>// Filtrar ventas por región del usuario
+[Vendedor_ID] = USERNAME()</pre>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <!-- 3.3 Refresh Automático -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>3.3 Refresh Automático de Datos</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Tipos de Refresh:</h4>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">1. REFRESH COMPLETO (Full Refresh)</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Se recargan todos los datos desde el origen</li>
+                  <li>Simple de implementar</li>
+                  <li>Ineficiente para grandes volúmenes</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">2. REFRESH INCREMENTAL (Incremental Refresh)</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Solo se cargan los datos nuevos o modificados</li>
+                  <li>Requiere columna de fecha/timestamp</li>
+                  <li>Disponible solo en Power BI Premium o Pro con grandes datasets</li>
+                  <li>Reduce tiempo y recursos significativamente</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">3. REFRESH EN TIEMPO REAL (DirectQuery/Live Connection)</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Consulta directa a la fuente de datos</li>
+                  <li>Sin almacenamiento en caché</li>
+                  <li>Requiere conexión constante</li>
+                  <li>Ideal para datos que cambian muy frecuentemente</li>
+                </ul>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Configuración de Refresh Automático:</h4>
+              <ol style="margin-left: 2rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                <li>En Power BI Service, seleccionar el dataset</li>
+                <li>Clic en "Schedule refresh"</li>
+                <li>Configurar credenciales de origen de datos</li>
+                <li>Activar "Keep your data up to date"</li>
+                <li>Seleccionar frecuencia (diaria, semanal)</li>
+                <li>Establecer hora de ejecución</li>
+                <li>Agregar destinatarios de notificaciones por email</li>
+              </ol>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Límites por Tipo de Licencia:</h4>
+              <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead>
+                  <tr style="background: var(--color-gray-light);">
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Licencia</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Refreshes/día</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Incremental</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Free</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">1</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">No</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Pro</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">8</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">No</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Premium</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">48</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Sí</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MÓDULO 4: PRÁCTICAS Y CASOS -->
+    <div class="card scroll-reveal" style="margin-bottom: 3rem;">
+      <h2 id="modulo4" style="color: var(--color-primary); margin-bottom: 2rem; font-size: 2rem;">
+        🛠️ MÓDULO 4: PRÁCTICAS Y CASOS DE USO
+      </h2>
+      
+      <ul class="accordion">
+        <!-- 4.1 Conexiones de Datos -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>4.1 Práctica: Conexiones y Extracción de Datos</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Tipos de Conexión en Power BI:</h4>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">1. EXCEL</p>
+                <ol style="margin-left: 2rem; line-height: 1.6;">
+                  <li>Inicio → Obtener datos → Excel</li>
+                  <li>Seleccionar archivo .xlsx</li>
+                  <li>Seleccionar hojas o rangos</li>
+                  <li>Clic en "Transformar datos" para abrir Power Query</li>
+                </ol>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">2. SQL SERVER</p>
+                <ol style="margin-left: 2rem; line-height: 1.6;">
+                  <li>Obtener datos → SQL Server</li>
+                  <li>Servidor: localhost\SQLEXPRESS</li>
+                  <li>Base de datos: Ventas_DB</li>
+                  <li>Modo: Import (recomendado para &lt;1GB)</li>
+                </ol>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">3. CSV / ARCHIVOS PLANO</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Delimitador: punto y coma (;) o coma (,)</li>
+                  <li>Codificación: UTF-8</li>
+                  <li>Primera fila como encabezados</li>
+                </ul>
+              </div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">4. CARPETA (Múltiples archivos)</p>
+                <ul style="margin-left: 2rem;">
+                  <li>Útil para ventas mensuales separadas</li>
+                  <li>Power BI combina automáticamente</li>
+                  <li>Requiere misma estructura de columnas</li>
+                </ul>
+              </div>
+              
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Modos de Conexión:</h4>
+              <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead>
+                  <tr style="background: var(--color-gray-light);">
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Modo</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Descripción</th>
+                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Cuándo usar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;"><strong>Import</strong></td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Copia datos a Power BI</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">&lt;1-2GB, mejor rendimiento</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;"><strong>DirectQuery</strong></td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Consulta directa a DB</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Datos en tiempo real, &gt;2GB</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;"><strong>Composite</strong></td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Mezcla de ambos</td>
+                    <td style="padding: 0.5rem; border: 1px solid #ddd;">Combinar tablas grandes y pequeñas</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </li>
+        
+        <!-- 4.2 21-Day Challenge -->
+        <li class="accordion__item">
+          <div class="accordion__header">
+            <span>4.2 Reto 21 Días - Desarrollo de Habilidades</span>
+            <span class="accordion__icon">▼</span>
+          </div>
+          <div class="accordion__content">
+            <div class="accordion__content-inner">
+              <h4 style="margin: 1.5rem 0 1rem 0; color: var(--color-primary);">Reto Diario Power BI - 21 Días de Práctica</h4>
+              <p style="margin-bottom: 1.5rem;">Desafío diseñado para desarrollar habilidades progresivamente en Power BI.</p>
+              
+              <div class="grid grid--3" style="gap: 1rem;">
+                <div style="background: var(--color-gray-light); padding: 1.5rem; border-radius: 0.5rem;">
+                  <h5 style="color: var(--color-primary); margin-bottom: 1rem;">📅 Semana 1: Fundamentos</h5>
+                  <ul style="font-size: 0.9rem; line-height: 1.6;">
+                    <li><strong>Día 1:</strong> Carga de Datos y Construcción del Modelo</li>
+                    <li><strong>Día 2:</strong> Crea las Medidas Básicas (SUM, COUNT)</li>
+                    <li><strong>Día 3:</strong> Agrega Íconos en Tarjetas</li>
+                    <li><strong>Día 4:</strong> Medidas de Comparación vs Año Anterior</li>
+                    <li><strong>Día 5:</strong> Medidas con Resultados Combinados</li>
+                    <li><strong>Día 6:</strong> Mejora el Formato de la Tarjeta Múltiple</li>
+                    <li><strong>Día 7:</strong> Ordena tus Medidas en Carpetas</li>
+                  </ul>
+                </div>
+                
+                <div style="background: var(--color-gray-light); padding: 1.5rem; border-radius: 0.5rem;">
+                  <h5 style="color: var(--color-primary); margin-bottom: 1rem;">📊 Semana 2: Visualizaciones</h5>
+                  <ul style="font-size: 0.9rem; line-height: 1.6;">
+                    <li><strong>Día 8:</strong> Crea Segmentaciones de Datos</li>
+                    <li><strong>Día 9:</strong> Crea Gráficos Sencillos</li>
+                    <li><strong>Día 10:</strong> Mejora el Diseño de tus Gráficos</li>
+                    <li><strong>Día 11:</strong> Segmentación con Imágenes</li>
+                    <li><strong>Día 12:</strong> Cambia el Resultado con Parámetro de Campo</li>
+                    <li><strong>Día 13:</strong> Agrega Imágenes al Parámetro de Campo</li>
+                    <li><strong>Día 14:</strong> Segmentación de Cuadrícula Estilo Tarjetas</li>
+                  </ul>
+                </div>
+                
+                <div style="background: var(--color-gray-light); padding: 1.5rem; border-radius: 0.5rem;">
+                  <h5 style="color: var(--color-primary); margin-bottom: 1rem;">🚀 Semana 3: Avanzado</h5>
+                  <ul style="font-size: 0.9rem; line-height: 1.6;">
+                    <li><strong>Día 15:</strong> Segmentación Dinámica para Periodos</li>
+                    <li><strong>Día 16:</strong> Crea Tarjetas Descriptivas con Imágenes</li>
+                    <li><strong>Día 17:</strong> Diseña tu Reporte desde Power Point</li>
+                    <li><strong>Día 18:</strong> Diseña tu Reporte desde Power Point (Parte 2)</li>
+                    <li><strong>Día 19:</strong> Importar Imagen de Fondo y Ajustar Posiciones</li>
+                    <li><strong>Día 20:</strong> Información sobre Herramientas e Interacciones</li>
+                    <li><strong>Día 21:</strong> Publicación y Compartición en Power BI Service</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <p>&copy; 2024 Diplomado Power BI - Johan Tapia, PhD</p>
+      <p>Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

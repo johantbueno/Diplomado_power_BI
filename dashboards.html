@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboards Demo - Diplomado Power BI</title>
+  <meta name="description" content="Dashboards interactivos tipo Power BI. Demostración de visualizaciones con datos de ventas y RRHH.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">📊 Power BI Diplomado</a>
+      <ul class="nav__menu">
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="programa.html" class="nav__link">Programa</a></li>
+        <li><a href="temas.html" class="nav__link">Temas</a></li>
+        <li><a href="practicas.html" class="nav__link">Prácticas</a></li>
+        <li><a href="dashboards.html" class="nav__link">Dashboards</a></li>
+        <li><a href="quiz.html" class="nav__link">Quiz</a></li>
+        <li><a href="recursos.html" class="nav__link">Recursos</a></li>
+        <li><a href="sobre.html" class="nav__link">Facilitador</a></li>
+        <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+      <div class="nav__actions">
+        <div class="nav__search"><input type="text" placeholder="Buscar..." aria-label="Buscar"><button>🔍</button></div>
+        <button class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+        <button class="nav__toggle" aria-label="Menú móvil">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" style="min-height: 50vh; padding: 6rem 2rem 3rem;">
+    <div class="hero__content">
+      <h1 class="hero__title">Dashboards Demo</h1>
+      <p class="hero__subtitle">Dashboards interactivos tipo Power BI con datos reales</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__header scroll-reveal">
+      <h2 class="section__title">Dashboard 1: Análisis de Ventas</h2>
+      <p class="section__subtitle">KPIs, tendencias y análisis de ventas por región y categoría</p>
+    </div>
+
+    <div class="dashboard scroll-reveal">
+      <div class="dashboard__header">
+        <h3 class="dashboard__title">Panel de Control de Ventas</h3>
+        <div class="dashboard__filters">
+          <button class="dashboard__filter active" data-filter="periodo" data-value="2024">2024</button>
+          <button class="dashboard__filter" data-filter="periodo" data-value="q1">Q1</button>
+          <button class="dashboard__filter" data-filter="periodo" data-value="q2">Q2</button>
+          <button class="dashboard__filter" data-filter="periodo" data-value="q3">Q3</button>
+        </div>
+      </div>
+
+      <div id="ventas-kpis" class="kpi-grid"></div>
+
+      <div class="grid grid--2" style="margin-bottom: 2rem;">
+        <div class="chart-container">
+          <div id="ventas-chart" class="chart"></div>
+        </div>
+        <div class="chart-container">
+          <div id="ventas-region-chart" class="chart"></div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h4 style="margin-bottom: 1rem; color: var(--color-dark);">Transacciones Recientes</h4>
+        <div id="ventas-table"></div>
+      </div>
+    </div>
+
+    <div class="section__header scroll-reveal" style="margin-top: 5rem;">
+      <h2 class="section__title">Dashboard 2: Análisis de Recursos Humanos</h2>
+      <p class="section__subtitle">Métricas de empleados, satisfacción y distribución por departamento</p>
+    </div>
+
+    <div class="dashboard scroll-reveal">
+      <div class="dashboard__header">
+        <h3 class="dashboard__title">Panel de RRHH</h3>
+        <div class="dashboard__filters">
+          <button class="dashboard__filter active" data-filter="estado" data-value="activos">Activos</button>
+          <button class="dashboard__filter" data-filter="departamento" data-value="ventas">Ventas</button>
+          <button class="dashboard__filter" data-filter="departamento" data-value="it">IT</button>
+          <button class="dashboard__filter" data-filter="departamento" data-value="marketing">Marketing</button>
+        </div>
+      </div>
+
+      <div id="rrhh-kpis" class="kpi-grid"></div>
+
+      <div class="grid grid--2" style="margin-bottom: 2rem;">
+        <div class="chart-container">
+          <div id="rrhh-distribucion-chart" class="chart"></div>
+        </div>
+        <div class="chart-container">
+          <div id="rrhh-satisfaccion-chart" class="chart"></div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <h4 style="margin-bottom: 1rem; color: var(--color-dark);">Lista de Empleados</h4>
+        <div id="rrhh-table"></div>
+      </div>
+    </div>
+
+    <div class="text-center scroll-reveal" style="margin-top: 3rem;">
+      <a href="quiz.html" class="btn btn--primary" style="margin-right: 1rem;">Probar Quiz</a>
+      <a href="programa.html" class="btn btn--outline">Ver Programa</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__brand">
+        <div class="footer__logo">📊 Power BI Diplomado</div>
+        <p class="footer__text">Programa completo de formación en Power BI e Inteligencia de Negocios.</p>
+      </div>
+      <div>
+        <h4 class="footer__title">Programa</h4>
+        <ul class="footer__links">
+          <li><a href="programa.html">Contenido</a></li>
+          <li><a href="practicas.html">Prácticas</a></li>
+          <li><a href="dashboards.html">Dashboards</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__title">Recursos</h4>
+        <ul class="footer__links">
+          <li><a href="recursos.html">Videos</a></li>
+          <li><a href="recursos.html">Documentación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__title">Contacto</h4>
+        <ul class="footer__links">
+          <li><a href="sobre.html">Sobre Johan Tapia</a></li>
+          <li><a href="contacto.html">Formulario</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 Diplomado Power BI - Johan Tapia, PhD. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
